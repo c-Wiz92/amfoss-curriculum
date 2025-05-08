@@ -1,0 +1,132 @@
+html, body{
+    height: 100vh;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+
+    font-family: "Poppins";
+}
+
+.main-container{
+    display: grid;
+    grid-template-columns: 15% auto 15%;
+    height: 100%;
+    width: 100%;
+    /* background-color: pink; */
+}
+
+.plant-holder{
+    /* background-color: pink; */
+    height: auto;
+    /* border: 1px solid gray; */
+}
+
+.plant{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#left-container{
+    grid-column: 1 / 2;
+    background-color: #eee;
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    grid-template-rows: repeat(7, 100px);
+
+}
+
+#right-container{
+    background-color: #eee;
+    width: 100%;
+    height: 100%;
+
+    grid-column: 3 / -1;
+    display: grid;
+    grid-template-rows: repeat(7, auto);
+}
+
+
+#terrarium{
+    text-align: center;
+    /* border: 1px solid black; */
+}
+
+
+
+
+.jar-walls {
+	height: 80%;
+	width: 60%;
+	background: #d1e1df;
+	border-radius: 1rem;
+	position: absolute;
+	bottom: 0.5%;
+	left: 20%;
+	opacity: 0.5;
+	z-index: 1;
+}
+
+.jar-top {
+	width: 50%;
+	height: 5%;
+	background: #d1e1df;
+	position: absolute;
+	bottom: 80.5%;
+	left: 25%;
+	opacity: 0.7;
+	z-index: 1;
+}
+
+.jar-bottom {
+	width: 50%;
+	height: 1%;
+	background: #d1e1df;
+	position: absolute;
+	bottom: 0%;
+	left: 25%;
+	opacity: 0.7;
+}
+
+.dirt {
+	width: 60%;
+	height: 5%;
+	background: #3a241d;
+	position: absolute;
+	border-radius: 0 0 1rem 1rem;
+	bottom: 1%;
+	left: 20%;
+	opacity: 0.7;
+	z-index: -1;
+}
+
+.jar-glossy-long{
+	position: absolute;
+	width: 3%;
+	height: 30%;
+	bottom: 110px;
+	left: 20px;
+	background-color: #f7f7f7;
+	border-radius: 20px;
+}
+
+.jar-glossy-short{
+	position: absolute;
+	width: 3%;
+	height: 10%;
+	bottom: 320px;
+	left: 20px;
+	background-color: #f7f7f7;
+	border-radius: 20px;
+}
+
+.jar-glossy-circle{
+	position: absolute;
+	width: 3%;
+	height: 4%;
+	bottom: 60px;
+	left: 20px;
+	background-color: #f7f7f7;
+	border-radius: 50%;
+}
