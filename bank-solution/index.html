@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bank App</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="trial.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+
+      <div id="app">Loading...</div>
+
+      <template id="login">
+        <h1>The Bank Project</h1>
+
+        <div class="form">
+          <h2>Login</h2>
+          <form id="loginForm" action="javascript:login()">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="user" required/>
+            <div id="loginError" class="errorMsg"></div>
+            <button>Login</button>
+          </form>
+        
+          <h2>Register</h2>
+          <form id="registerForm" action="javascript:register()">
+            <label for="user">Username (required)</label>
+            <input id="UserName" name="user" type="text" required maxlength="15"/>
+            <label for="currency">Currency (required)</label>
+            <input id="currency" name="currency" type="text" value="$" required/>
+            <label for="description">Description</label>
+            <input id="description" name="description" type="text" maxlength="150"/>
+            <label for="balance">Current balance</label>
+            <input id="balance" name="balance" type="number" value="0" />
+            <div id="registerError" class="errorMsg"></div>
+            <button>Register</button>
+          </form>
+        </div> <!-- close form div --> 
+      </template>
+
+      <template id="dashboard">
+        <header>
+          <h1>Bank App</h1>
+        </header>
+        <section><h3>Balance: </h3><span id="balance"></span><span id="currency"></span></section>
+        <section>
+          <h2>Here are your transactions :</h2>
+          <div class="tableDiv">
+          <table border="1">
+            <tbody id="transactions"></tbody>
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Object</th>
+                <th>Amount</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+          </div>
+        </section>
+        <h4 id="description"></h4>
+
+        <button id="dialogButton" onclick="Dialog()">New Transaction</button>
+
+        <footer>
+          <a class="Link" href="/login" onclick="onLinkClick(event)">Logout</a>
+          <a class="Link" href="/credits" onclick="onLinkClick(event)">View Credits</a>
+        </footer>
+      </template>
+
+      <template id="credits">
+        <p>This app was created by c-Wiz92</p>
+        <a href="/login" onclick="onLinkClick(event)">Back to login page</a>
+      </template>
+
+      <template id="transaction">
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </template>     
+
+      <dialog id="dialogBox">
+        <h2>ADD TRANSACTION</h2>
+
+        <form id="transactionForm">
+          <label for="trDate">DATE</label>
+          <input type="date" id="trDate" required/>
+          <label for="trObject">OBJECT</label>
+          <input type="text" id="trObject" required/>
+          <label for="trValue">AMOUNT(USE NEGATIVES FOR DEBIT)</label>
+          <input type="number" id="trValue" required/>
+          <button id="addTransaction">Make Transaction</button>
+        </form>
+      </dialog>
+
+  </body>
+</html>
